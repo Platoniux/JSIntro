@@ -87,9 +87,9 @@ const startDiscountTime = enterHour('What time did dicounts start?');
 const endDiscountTime = enterHour('What time will dicounts end?')
 
 if(startDiscountTime < endDiscountTime && presentTime >= startDiscountTime  && presentTime <=endDiscountTime) {
-  console.log('It's time for sales!!!');
+  console.log('It\'s time for sales!!!');
 } else if (startDiscountTime > endDiscountTime && (presentTime >= startDiscountTime || presentTime <= endDiscountTime)) {
-  console.log('It's time for sales!!!');
+  console.log('It\'s time for sales!!!');
 } else {
   console.log('Sory, but can you get back another time?');
 }
