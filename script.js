@@ -82,12 +82,26 @@ Stepan < Masha < Andry;
 
 
 /*Task 7 Sales*/
-var present = prompt("What time is it now?", "");
+var presentTime = enterHour("What time is it now?");
+var startDiscountTime = enterHour("What time did dicounts start?");
+var endDiscountTime = enterHour("What time will dicounts end?")
 
-if(present > 9 && present < 18) {
-  console.log("It's time to sales!!!")
+if(startDiscountTime < endDiscountTime && presentTime >= startDiscountTime  && presentTime <=endDiscountTime) {
+  console.log("It's time for sales!!!");
+} else if (startDiscountTime > endDiscountTime && (presentTime >= startDiscountTime || presentTime <= endDiscountTime)) {
+  console.log("It's time for sales!!!");
 } else {
-  console.log("Sory, but can you get back in business hours?")
+  console.log("Sory, but can you get back another time?");
+}
+
+
+function enterHour(question){
+  var a = +prompt(question, "")
+  if(isNaN(a) || a < 0 || a > 23) {
+    alert("Incorrect value")
+    enterHour(question, "");
+  }
+  return a;
 }
 
 
@@ -97,7 +111,7 @@ if(present > 9 && present < 18) {
  var existOfStepan = confirm("Чи прийшов Степан?");
  var existOfMiko = confirm("Чи пройшов Михайло?");
 
-if((existOfMiko && existOfAngel && existOfStepan) || (!existOfMiko && !existOfAngel && !existOfStepan)) {
+if((existOfMiko && existOfAngel && existOfStepan) || (!existOfAngel && (!existOfMiko || !existOfStepan))) {
   alert("Маша засмучена!");
 } else {
   alert("Маша щаслива!");
