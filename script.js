@@ -1,14 +1,14 @@
 /*Task 2*/
-var nameOfSchool = 'Mate Academy';
-var namesOfCourses = ['MateAcademyFE', 'MateAcademyQA', 'MateAcademyJavaDev', 'MateAcademyPython'];
-var nameOfGroup = 'fe_oct18';
-var ourStudentsName = ['Roma', 'Veronika', 'Vania', 'Vlad', 'Alina', 'Cookies', 'Dimon', 'Julia', 'Sergey', 'Anton'];
+const nameOfSchool = 'Mate Academy';
+const namesOfCourses = ['MateAcademyFE', 'MateAcademyQA', 'MateAcademyJavaDev', 'MateAcademyPython'];
+const nameOfGroup = 'fe_oct18';
+const ourStudentsName = ['Roma', 'Veronika', 'Vania', 'Vlad', 'Alina', 'Cookies', 'Dimon', 'Julia', 'Sergey', 'Anton'];
 
 
 
 /*Task 3 In McDonalds*/
-var sum = prompt('Скільки грошей ви маєте?', '');
-var offer;
+const sum = prompt('Скільки грошей ви маєте?', '');
+const offer;
 
 if (sum >= 100) {
   offer = confirm('Ви можете купити БігМакМеню. Бажаєте?');
@@ -77,14 +77,14 @@ if (sum >= 100) {
 }
 
 /*Task 6 */
-var Masha, Stepan, Andry;
+const Masha, Stepan, Andry;
 Stepan < Masha < Andry;
 
 
 /*Task 7 Sales*/
-var presentTime = enterHour('What time is it now?');
-var startDiscountTime = enterHour('What time did dicounts start?');
-var endDiscountTime = enterHour('What time will dicounts end?')
+const presentTime = enterHour('What time is it now?');
+const startDiscountTime = enterHour('What time did dicounts start?');
+const endDiscountTime = enterHour('What time will dicounts end?')
 
 if(startDiscountTime < endDiscountTime && presentTime >= startDiscountTime  && presentTime <=endDiscountTime) {
   console.log('It's time for sales!!!');
@@ -95,8 +95,8 @@ if(startDiscountTime < endDiscountTime && presentTime >= startDiscountTime  && p
 }
 
 
-function enterHour(question){
-  var a = +prompt(question, '')
+const enterHour = function enterHourForTask7(question){
+  const a = +prompt(question, '')
   if(isNaN(a) || a < 0 || a > 23) {
     alert('Incorrect value')
     enterHour(question, '');
@@ -107,9 +107,9 @@ function enterHour(question){
 
 /*Task 8 Сapricious Masha*/
 
- var existOfAngel = confirm('Чи прийшла Анжела?');
- var existOfStepan = confirm('Чи прийшов Степан?');
- var existOfMiko = confirm('Чи пройшов Михайло?');
+ const existOfAngel = confirm('Чи прийшла Анжела?');
+ const existOfStepan = confirm('Чи прийшов Степан?');
+ const existOfMiko = confirm('Чи пройшов Михайло?');
 
 if((existOfMiko && existOfAngel && existOfStepan) || (!existOfAngel && (!existOfMiko || !existOfStepan))) {
   alert('Маша засмучена!');
