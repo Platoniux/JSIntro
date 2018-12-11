@@ -99,7 +99,7 @@ const enterHour = function enterHourForTask7(question){
   const a = +prompt(question, '')
   if(isNaN(a) || a < 0 || a > 23) {
     alert('Incorrect value')
-    enterHour(question, '');
+    enterHourForTask7(question, '');
   }
   return a;
 }
