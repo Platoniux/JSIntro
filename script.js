@@ -79,7 +79,7 @@ var enterHour = function enterHourForTask7(question){
     enterHourForTask7(question, '');
   }
   return a;
-}
+};
 
 
 
@@ -87,7 +87,7 @@ var presentTime = enterHour('What time is it now?');
 var startDiscountTime = enterHour('What time did dicounts start?');
 var endDiscountTime = enterHour('What time will dicounts end?');
 
-if (startDiscountTime < endDiscountTime && presentTime >= startDiscountTime && presentTime <=endDiscountTime) {
+if (startDiscountTime < endDiscountTime && presentTime >= startDiscountTime && presentTime <= endDiscountTime) {
   console.log('It\'s time for sales!!!');
 } else if (startDiscountTime > endDiscountTime && (presentTime >= startDiscountTime || presentTime <= endDiscountTime)) {
   console.log('It\'s time for sales!!!');
